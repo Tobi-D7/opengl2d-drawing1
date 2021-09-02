@@ -66,11 +66,11 @@ VERSION_MICRO := 0
 #---------------------------------------------------------------------------------
 TARGET		:=	GL-Sample
 BUILD		:=	build
-LIBTWEEN	:=  $(CURDIR)libs/lib
+LIBTWEEN	:=  $(CURDIR)libs
 #UNIVCORE	:=	extlibs/RenderD7 extlibs/RenderD7/internal extlibs/RenderD7/external extlibs/RenderD7/external/tween-engine/include/ extlibs/RenderD7/external/tween-engine/include/TweenEngine extlibs/RenderD7/external/tween-engine/source
-SOURCES		:=	$(UNIVCORE) source source/paint source/exporter/formats source/exporter
+SOURCES		:=      source source/paint source/exporter/formats source/exporter
 DATA		:=	data
-INCLUDES	:=	$(UNIVCORE) source source/paint source/exporter/formats source/exporter
+INCLUDES	:=	source source/paint source/exporter/formats source/exporter
 GRAPHICS	:=	gfx
 #GFXBUILD	:=	$(BUILD)
 ROMFS		:=	romfs
