@@ -37,19 +37,17 @@ public:
     void update_delta_time();
 };
 FrameManager::FrameManager(){
-    last_time = (glutGet(GLUT_ELAPSED_TIME));
+    last_time = 0;
 }
 void FrameManager::update(){
-    float time = (glutGet(GLUT_ELAPSED_TIME));
+    float time = 0;
     float delta = (time - last_time);
     delta_time = delta/ONE_SECOND;
     last_time = time;
 }
 void FrameManager::print_fps(){
-    if((glutGet(GLUT_ELAPSED_TIME) - last_time) == 0){
-        return;
-    }
-    int fps = ONE_SECOND/((glutGet(GLUT_ELAPSED_TIME) - last_time));
+    
+    int fps = ONE_SECOND/0 - last_time));
     // Clear screen
     for(int i=0; i<50; i++) std::cout<<"\n";
     // Print FPS
