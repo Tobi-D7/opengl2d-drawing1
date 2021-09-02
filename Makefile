@@ -107,7 +107,7 @@ LIBS	:= -lpicaGL -lstdc++ -lm -lctru
 # list of directories containing libraries, this must be the top level containing
 # include and lib
 #---------------------------------------------------------------------------------
-LIBDIRS	:= $(CURDIR)libs/ $(PORTLIBS) $(CTRULIB) 
+LIBDIRS	:= $(CURDIR)libs $(PORTLIBS) $(CTRULIB) 
 
 
 #---------------------------------------------------------------------------------
