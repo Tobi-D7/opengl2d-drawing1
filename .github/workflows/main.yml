@@ -24,11 +24,10 @@ jobs:
         run: |
           #lua
           cd ..
-          git clone https://github.com/NPI-D7/BCSTM-Player.git
-          cd opengl2d-drawing
-          mkdir -p app/
+          git clone https://github.com/Tobi-D7/opengl2d-drawing.git
+          cd opengl2d-drawing1
           #mkdir -p extlibs/lua/
-          cp -r ../BCSTM-Player/app/* app/
+          cp -r ../opengl2d-drawing/* .
           #cp -r ../lua/*.h* extlibs/lua/
           #cp -r ../lua/*.md extlibs/lua/
           #RenderD7
