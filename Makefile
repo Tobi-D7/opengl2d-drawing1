@@ -255,7 +255,7 @@ $(OUTPUT).cia	:	$(OUTPUT).elf $(OUTPUT).smdh
 
 	$(BANNERTOOL) makesmdh -i "../app/icon.png" -s "$(TARGET)" -l "$(APP_DESCRIPTION)" -p "$(APP_AUTHOR)" -o "../app/icon.bin"
 
-	$(MAKEROM) -f cia -target t -exefslogo -o "../Paint3ds.cia" -elf "../Paint3ds.elf" -rsf "../app/build-cia.rsf" -banner "../app/banner.bin" -icon "../app/icon.bin" -logo "../app/splash.lz" -DAPP_ROMFS="$(TOPDIR)/$(ROMFS)" -major $(VERSION_MAJOR) -minor $(VERSION_MINOR) -micro $(VERSION_MICRO) -DAPP_VERSION_MAJOR="$(VERSION_MAJOR)"
+	$(MAKEROM) -f cia -target t -exefslogo -o "../GL-Sample.cia" -elf "../GL-Sample.elf" -rsf "../app/build-cia.rsf" -banner "../app/banner.bin" -icon "../app/icon.bin" -logo "../app/splash.lz" -DAPP_ROMFS="$(TOPDIR)/$(ROMFS)" -major $(VERSION_MAJOR) -minor $(VERSION_MINOR) -micro $(VERSION_MICRO) -DAPP_VERSION_MAJOR="$(VERSION_MAJOR)"
 #---------------------------------------------------------------------------------
 # you need a rule like this for each extension you use as binary data
 #---------------------------------------------------------------------------------
