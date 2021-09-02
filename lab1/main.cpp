@@ -25,7 +25,7 @@ int main(int argc, char **argv){
              printf("6");
              
              printf("7");
-            // pglSwapBuffers();
+             pglSwapBuffers();
         }
         pglExit();
 	return 0;
