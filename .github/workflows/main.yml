@@ -40,7 +40,7 @@ jobs:
           sudo chmod +x makerom
           mv makerom /usr/local/bin
           rm makerom-v0.17-ubuntu_x86_64.zip
-          cd ../
+          cd ..
           git clone https://github.com/Tobi-D7/PicaGL.git
           cd PicaGL
           make
