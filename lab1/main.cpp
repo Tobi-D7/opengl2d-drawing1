@@ -9,15 +9,22 @@ int main(int argc, char **argv){
 
 	gfxInit(GSP_BGR8_OES, GSP_BGR8_OES, true);
 	//gfxSet3D(true);
-
+        consoleInit(GFX_BOTTOM, NULL);
+        printf("1");
 	pglInit();
+        printf("2");
 	init();
+        printf("3");
         while (aptMainLoop())
         {
+             printf("4");
              pglSelectScreen(GFX_TOP, GFX_LEFT);
+             printf("5");
              display();
+             printf("6");
              reshape(400, 240);
-             pglSwapBuffers();
+             printf("7");
+            // pglSwapBuffers();
         }
         pglExit();
 	return 0;
