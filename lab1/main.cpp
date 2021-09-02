@@ -4,6 +4,11 @@ using namespace std;
 
 int main(int argc, char **argv){
     srand((uint32_t)time(NULL));
+        romfsInit();
+	osSetSpeedupEnable(true);
+
+	gfxInit(GSP_BGR8_OES, GSP_BGR8_OES, true);
+	//gfxSet3D(true);
 
 	pglInit();
 	init();
