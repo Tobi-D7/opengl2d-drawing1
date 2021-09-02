@@ -9,7 +9,6 @@ int main(int argc, char **argv){
 
 	gfxInit(GSP_BGR8_OES, GSP_BGR8_OES, true);
 	//gfxSet3D(true);
-        consoleInit(GFX_BOTTOM, NULL);
         printf("1");
 	pglInit();
         printf("2");
