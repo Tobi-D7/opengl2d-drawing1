@@ -245,8 +245,8 @@ void start_render(){
 
 // Tidies up and updates states after one render loop
 void finish_render(){
-    frame_manager->print_fps();
-    frame_manager->update();
+    //frame_manager->print_fps();
+    //frame_manager->update();
     
     // Re-render to start next frame
    // glutPostRedisplay();
