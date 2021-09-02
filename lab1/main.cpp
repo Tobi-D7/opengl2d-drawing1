@@ -14,6 +14,7 @@ int main(int argc, char **argv){
 	pglInit();
         printf("2");
 	init();
+        reshape(400, 240);
         printf("3");
         while (aptMainLoop())
         {
@@ -22,7 +23,7 @@ int main(int argc, char **argv){
              printf("5");
              display();
              printf("6");
-             reshape(400, 240);
+             
              printf("7");
             // pglSwapBuffers();
         }
