@@ -47,7 +47,7 @@ void FrameManager::update(){
 }
 void FrameManager::print_fps(){
     
-    int fps = ONE_SECOND/0 - last_time));
+    int fps = ONE_SECOND/0 - last_time;
     // Clear screen
     for(int i=0; i<50; i++) std::cout<<"\n";
     // Print FPS
