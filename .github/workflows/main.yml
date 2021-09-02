@@ -43,6 +43,7 @@ jobs:
       - name: Build
         id: build
         run: |
+          cp -r libs/* $(CTRULIB)/
           make
           mkdir -p ~/artifacts
           cp GL-Sample.3dsx ~/artifacts
