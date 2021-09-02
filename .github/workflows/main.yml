@@ -40,10 +40,14 @@ jobs:
           sudo chmod +x makerom
           mv makerom /usr/local/bin
           rm makerom-v0.17-ubuntu_x86_64.zip
+          git clone https://github.com/Tobi-D7/PicaGL.git
+          cd ../PicaGL
+          make
+          make install
+          cd ../opengl2d-drawing1
       - name: Build
         id: build
         run: |
-          sudo cp -r libs/* $(PORTLIBS)/
           make
           mkdir -p ~/artifacts
           cp GL-Sample.3dsx ~/artifacts
