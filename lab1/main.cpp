@@ -47,8 +47,8 @@ int main(int argc, char **argv){
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
              printf("5");
-             display();
-             reshape(400, 240);
+             //display();
+             //reshape(400, 240);
              printf("6");
              
              	pglSwapBuffers();
