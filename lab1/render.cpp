@@ -31,9 +31,9 @@
 // Tracks the update loop
 class FrameManager{
 private:
-    static float current_fps = 0.0f;
-    static unsigned int frames = 0;
-    static u64 last_time = 0;
+    float current_fps = 0.0f;
+    unsigned int frames = 0;
+    u64 last_time = 0;
     float d11framerate = 0;
 public:
     float delta_time = 0;
@@ -57,13 +57,10 @@ void FrameManager::update(){
 }
 void FrameManager::print_fps(){
     
-    int fps = ONE_SECOND/0 - last_time;
     // Clear screen
     for(int i=0; i<50; i++) std::cout<<"\n";
     // Print FPS
     std::cout<<"FPS: "<< d11framerate << " ";
-    for(int i=0; i<fps; i++) std::cout<<"|";
-    std::cout<<"\n";
 }
 
 // Stores two floating point numbers relating to x, y positions
