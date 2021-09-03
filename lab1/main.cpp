@@ -11,6 +11,7 @@ int main(int argc, char **argv){
 	//gfxSet3D(true);
         printf("1");
 	pglInit();
+        pglSelectScreen(GFX_TOP, GFX_LEFT);
         printf("2");
 	init();
         reshape(400, 240);
@@ -18,7 +19,7 @@ int main(int argc, char **argv){
         while (aptMainLoop())
         {
              printf("4");
-             pglSelectScreen(GFX_TOP, GFX_LEFT);
+             
              printf("5");
              display();
              printf("6");
