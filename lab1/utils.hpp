@@ -17,6 +17,7 @@
 #include <time.h>       /* time */
 #include <3ds.h>
 #include <GL/picaGL.h>
+#include <GL/glu.h>
 /* Include header files depending on platform */
 #ifdef _WIN32
 #include "glut.h"
