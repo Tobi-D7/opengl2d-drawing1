@@ -46,10 +46,14 @@ FrameManager::FrameManager(){
     last_time = 0;
 }
 void FrameManager::update(){
-    float time = 0;
-    float delta = (time - last_time);
-    delta_time = delta/1000;
-    last_time = time;
+    frames++;
+	u64 delta_time = osGetTime() - last_time;
+	if (delta_time >= 1000) {
+		current_fps = frames/(delta_time/1000.0f)+1;
+		frames = 0;
+		last_time = osGetTime();
+	}
+	d11framerate = current_fps;
 }
 void FrameManager::print_fps(){
     
@@ -251,8 +255,8 @@ void start_render(){
 
 // Tidies up and updates states after one render loop
 void finish_render(){
-    //frame_manager->print_fps();
-    //frame_manager->update();
+    frame_manager->print_fps();
+    frame_manager->update();
     
     // Re-render to start next frame
    // glutPostRedisplay();
