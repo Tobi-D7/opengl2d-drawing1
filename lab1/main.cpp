@@ -14,14 +14,15 @@ int main(int argc, char **argv){
         pglSelectScreen(GFX_TOP, GFX_LEFT);
         printf("2");
 	init();
-        reshape(400, 240);
+        display();
+        
         printf("3");
         while (aptMainLoop())
         {
              printf("4");
              
              printf("5");
-             display();
+             reshape(400, 240);
              printf("6");
              
              printf("7");
