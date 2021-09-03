@@ -27,14 +27,14 @@ int main(int argc, char **argv){
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 
-	gluPerspective(80.0f, 400.f/240.0f, 0.01f, 100.0f);
+	//gluPerspective(80.0f, 400.f/240.0f, 0.01f, 100.0f);
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 
         printf("2");
 	init();
-        display();
+        
         
         printf("3");
         while (aptMainLoop())
@@ -47,6 +47,7 @@ int main(int argc, char **argv){
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
              printf("5");
+             display();
              reshape(400, 240);
              printf("6");
              
