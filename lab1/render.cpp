@@ -24,11 +24,17 @@
 
 #define BACKGROUND_SATURATION 0.25f
 
+// Fps Calc
+
+//-----------------
+
 // Tracks the update loop
 class FrameManager{
 private:
-    int last_time = 0;
-    int ONE_SECOND = 1000;
+    static float current_fps = 0.0f;
+    static unsigned int frames = 0;
+    static u64 last_time = 0;
+    float d11framerate = 0;
 public:
     float delta_time = 0;
     FrameManager();
@@ -42,7 +48,7 @@ FrameManager::FrameManager(){
 void FrameManager::update(){
     float time = 0;
     float delta = (time - last_time);
-    delta_time = delta/ONE_SECOND;
+    delta_time = delta/1000;
     last_time = time;
 }
 void FrameManager::print_fps(){
@@ -51,7 +57,7 @@ void FrameManager::print_fps(){
     // Clear screen
     for(int i=0; i<50; i++) std::cout<<"\n";
     // Print FPS
-    std::cout<<"FPS: "<< fps << " ";
+    std::cout<<"FPS: "<< d11framerate << " ";
     for(int i=0; i<fps; i++) std::cout<<"|";
     std::cout<<"\n";
 }
