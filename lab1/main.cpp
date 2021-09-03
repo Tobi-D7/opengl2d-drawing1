@@ -11,7 +11,27 @@ int main(int argc, char **argv){
 	//gfxSet3D(true);
         printf("1");
 	pglInit();
-        pglSelectScreen(GFX_TOP, GFX_LEFT);
+        glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
+	glViewport(0,0, 400, 240);
+
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	glDepthFunc(GL_LESS);
+
+	glEnable(GL_BLEND);
+	glEnable(GL_ALPHA_TEST);
+	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_TEXTURE_2D);
+
+	glDisable(GL_CULL_FACE);
+
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+
+	gluPerspective(80.0f, 400.f/240.0f, 0.01f, 100.0f);
+
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+
         printf("2");
 	init();
         display();
@@ -20,14 +40,24 @@ int main(int argc, char **argv){
         while (aptMainLoop())
         {
              printf("4");
-             
+             gspWaitForVBlank();
+
+		hidScanInput();
+
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
              printf("5");
              reshape(400, 240);
              printf("6");
              
-             printf("7");
-             pglSwapBuffers();
-        }
-        pglExit();
+             	pglSwapBuffers();
+
+		if (hidKeysDown() & KEY_START)
+			break;
+	}
+
+	pglExit();
+	gfxExit();
+	
 	return 0;
 }
