@@ -7,11 +7,12 @@ int main(int argc, char **argv){
         romfsInit();
 	osSetSpeedupEnable(true);
 
-	gfxInit(GSP_BGR8_OES, GSP_BGR8_OES, true);
+	//gfxInit(GSP_BGR8_OES, GSP_BGR8_OES, true);
+        gfxInitDefault();
 	//gfxSet3D(true);
         printf("1");
 	pglInit();
-        glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
+        glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 	glViewport(0,0, 400, 240);
 
 	//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
