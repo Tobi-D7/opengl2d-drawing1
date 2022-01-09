@@ -14,15 +14,15 @@ int main(int argc, char **argv){
         glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
 	glViewport(0,0, 400, 240);
 
-	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-	glDepthFunc(GL_LESS);
+	//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	//glDepthFunc(GL_LESS);
 
-	glEnable(GL_BLEND);
-	glEnable(GL_ALPHA_TEST);
-	glEnable(GL_DEPTH_TEST);
-	glEnable(GL_TEXTURE_2D);
+	//glEnable(GL_BLEND);
+	//glEnable(GL_ALPHA_TEST);
+	//glEnable(GL_DEPTH_TEST);
+	//glEnable(GL_TEXTURE_2D);
 
-	glDisable(GL_CULL_FACE);
+	//glDisable(GL_CULL_FACE);
 
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
