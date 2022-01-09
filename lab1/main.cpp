@@ -51,6 +51,12 @@ int main(int argc, char **argv){
              //display();
              //reshape(400, 240);
              printf("6");
+             glBegin(GL_LINES);
+            glColor4f(0, 0, 0, 1);
+            glVertex2f(40, 60);
+            glColor4f(0, 0, 0, 1);
+            glVertex2f(80, 100);
+        glEnd();
              
              	pglSwapBuffers();
 
