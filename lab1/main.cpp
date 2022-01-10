@@ -12,6 +12,7 @@ int main(int argc, char **argv){
 	//gfxSet3D(true);
         printf("1");
 	pglInit();
+        pglSelectScreen(GFX_TOP, GFX_LEFT);
         glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 	glViewport(0,0, 400, 240);
 
