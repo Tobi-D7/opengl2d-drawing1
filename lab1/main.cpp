@@ -13,7 +13,7 @@ int main(int argc, char **argv){
         printf("1");
 	pglInit();
         pglSelectScreen(GFX_TOP, GFX_LEFT);
-        glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+        glClearColor(0.4f, 0.1f, 0.9f, 1.0f);
 	glViewport(0,0, 400, 240);
 
 	//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
