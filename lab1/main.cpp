@@ -53,15 +53,14 @@ int main(int argc, char **argv){
              //reshape(400, 240);
              printf("6");
              glClear(GL_COLOR_BUFFER_BIT);
-	glBegin(GL_TRIANGLES);
-	glColor3f(1.0f, 0.0f, 0.0f);
-	glVertex2i(0, 1);
-	glColor3f(0.0f, 1.0f, 0.0f);
-	glVertex2i(-1, -1);
-	glColor3f(0.0f, 0.0f, 1.0f);
-	glVertex2i(1, -1);
-	glEnd();
-	glFlush();
+		glBegin(GL_POLYGON);
+    		glColor3f(1, 0, 0); glVertex3f(-0.6, -0.75, 0.5);
+    		glColor3f(0, 1, 0); glVertex3f(0.6, -0.75, 0);
+    		glColor3f(0, 0, 1); glVertex3f(0, 0.75, 0);
+  		glEnd();
+
+  		// Flush drawing command buffer to make drawing happen as soon as possible.
+ 	 	glFlush();
              
              	pglSwapBuffers();
 
